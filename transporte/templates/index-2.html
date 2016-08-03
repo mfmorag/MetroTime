@@ -1,0 +1,177 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block titulo %}<title>Rutas</title>{% endblock %}
+    <!-- Core CSS - Include with every page -->
+    <link href="/static/assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="/static/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="/static/assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
+    <link href="/static/assets/css/style.css" rel="stylesheet" />
+    <link href="/static/assets/css/main-style.css" rel="stylesheet" />
+
+{% block top %}
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	<script src="/static/js/mapa.js"></script>
+{% endblock %}
+   </head>
+<body>
+    <!--  wrapper -->
+    <div id="wrapper">
+        <!-- navbar top -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
+            <!-- navbar-header -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="/static/images/logoadmin.png">
+                </a>
+            </div>
+            <!-- end navbar-header -->
+            <!-- navbar-top-links -->
+            <ul class="nav navbar-top-links navbar-right">
+                <!-- main dropdown -->
+                <li class="dropdown">
+                    <a href="/transporte/inicio/"><h4 style="color: #1a1a1a; font-family: 'Cooper Black';">Inicio</h4></a></li>
+
+                <li class="dropdown">
+                <a href="/transporte/rutas/"><h4 style="color: #1a1a1a; font-family: 'Cooper Black';">Rutas</h4></a></li>
+
+                <li class="dropdown">
+	            <a href="/transporte/ubicacion/"><h4 style="color: #1a1a1a; font-family: 'Cooper Black';">Ubicacion de Unidades</h4></a></li>
+
+                <!-- end main dropdown -->
+            </ul>
+            <!-- end navbar-top-links -->
+
+        </nav>
+        <!-- end navbar top -->
+
+        <!-- navbar side -->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <!-- sidebar-collapse -->
+            <div class="sidebar-collapse">
+                <!-- side-menu -->
+                <ul class="nav" id="side-menu">
+                    <li>
+                        <!-- user image section-->
+                        <div class="user-section">
+                        </div>
+                        <!--end user image section-->
+                    </li>
+                    <li>
+                        <a><img src="/static/images/troncal.png" style="margin-left:10px; margin-right:30px;">Troncales<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/transporte/Troncal1/"><img src="/static/images/azul.png" style="margin-left:10px; margin-right:30px;">Troncal 1</a></li>
+                            <li><a href="/transporte/Troncal2/"><img src="/static/images/azul.png" style="margin-left:10px; margin-right:30px;">Troncal 2</a></li>
+                            <li><a href="/transporte/Troncal3/"><img src="/static/images/azul.png" style="margin-left:10px; margin-right:30px;">Troncal 3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a><img src="/static/images/alimentador.png" style="margin-left:5px; margin-right:30px;">Alimentadores<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/transporte/norte/"><img src="/static/images/negro.png" style="margin-left: 10px; margin-right: 10px;">Norte<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li><a href="/transporte/R-alborada/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">Alborada</a></li>
+                                    <li><a href="/transporte/R-guayacanes/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">Guayacanes</a></li>
+                                    <li><a href="/transporte/R-samanes/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">Samanes</a></li>
+                                    <li><a href="/transporte/R-garzota/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">Garzota</a></li>
+                                    <li><a href="/transporte/R-juan-tancamarengo/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">Juan Tanca Marengo</a></li>
+                                    <li><a href="/transporte/R-orellana/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">Orellana</a></li>
+                                    <li><a href="/transporte/R-sauces/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">Sauces</a></li>
+                                    <li><a href="/transporte/R-florida-rotonda/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">Florida-Rotonda</a></li>
+                                    <li><a href="/transporte/R-mapasingue-oeste/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">Mapasingue-Oeste</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/transporte/sur/"><img src="/static/images/negro.png" style="margin-left: 10px; margin-right: 10px;">Sur<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li><a href="/transporte/R-estelaMaris-Pradera/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">Estela Maris - Pradera</a></li>
+                                    <li><a href="/transporte/R-laPlayita/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">La Playita</a></li>
+                                    <li><a href="/transporte/R-25Julio-Pradera/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">25 de Julio - Pradera</a></li>
+                                    <li><a href="/transporte/R-atahualpa-sanAgustin/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">Atahualpa - San Agustin</a></li>
+                                    <li><a href="/transporte/R-fertisa/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">Fertisa</a></li>
+                                    <li><a href="/transporte/R-floresta/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">Floresta</a></li>
+                                    <li><a href="/transporte/R-GuasmoCentral/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">Guasmo Central</a></li>
+                                    <li><a href="/transporte/R-GuasmoSur-Cristal/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">GuasmoSur - Cristal</a></li>
+                                    <li><a href="/transporte/R-losEsteros/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">Los Estero - 25 de Julio</a></li>
+                                    <li><a href="/transporte/R-martinAviles/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">Martin Aviles</a></li>
+                                    <li><a href="/transporte/R-playita-sanAgustin/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">Playita - San Agustin</a></li>
+                                    <li><a href="/transporte/R-puertomaritimo/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">Puerto Maritimo</a></li>
+                                    <li><a href="/transporte/R-trinipuerto/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">Trinipuerto</a></li>
+                                    <li><a href="/transporte/R-trinitaria-2dopuente/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">Trinitaria - 2do Puente</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/transporte/centro/"><img src="/static/images/negro.png" style="margin-left: 10px; margin-right: 10px;">Centro<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li><a href="/transporte/R-centro/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">Centro</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/transporte/este/"><img src="/static/images/negro.png" style="margin-left: 10px; margin-right: 10px;">Este<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li><a href="/transporte/R-mapasingue-este/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">Mapasingue Este</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/transporte/noroeste/"><img src="/static/images/negro.png" style="margin-left: 10px; margin-right: 10px;">Nor-Oeste<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li><a href="/transporte/R-causarina/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">Causarina</a></li>
+                                    <li><a href="/transporte/R-flor-de-bastion/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">Flor de Bastion</a></li>
+                                    <li><a href="/transporte/R-iguanas/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">Iguanas</a></li>
+                                    <li><a href="/transporte/R-juan-montalvo/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">Juan Montalvo</a></li>
+                                    <li><a href="/transporte/R-mucholote-G/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">Mucho Lote - Guamote</a></li>
+                                    <li><a href="/transporte/R-mucholote-O/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">Mucho Lote - Orquideas</a></li>
+                                    <li><a href="/transporte/R-pascuales/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">Pascuales</a></li>
+                                    <li><a href="/transporte/R-UdeBastion/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">U de Bastion</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/transporte/suroeste/"><img src="/static/images/negro.png" style="margin-left: 10px; margin-right: 10px;">Sur-Oeste<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li><a href="/transporte/R-VialaCosta/"><img src="/static/images/azul.png" style="margin-left:20px; margin-right:20px;">Via a la Costa</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- second-level-items -->
+                    </li>
+                    <li>
+                        <a href="/transporte/miRuta/"><span><img src="/static/images/ruta.png" style="margin-left:10px; margin-right:30px;">Mi ruta</span></a>
+                    </li>
+                </ul>
+                <!-- end side-menu -->
+            </div>
+            <!-- end sidebar-collapse -->
+        </nav>
+        <!-- end navbar side -->
+        <!--  page-wrapper -->
+        <div id="page-wrapper" style="padding: 0 15px;">
+{% block pag %}
+            <div class="row">
+                <div style="margin-top:25px; margin-left:0px;"><div style="height: 860px;" id="mapa"></div></div>
+            </div>
+        </div>
+{% endblock %}
+        </div>
+        <!-- end page-wrapper -->
+    </div>
+    <!-- end wrapper -->
+
+    <!-- Core Scripts - Include with every page -->
+    <script src="/static/assets/plugins/jquery-1.10.2.js"></script>
+    <script src="/static/assets/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="/static/assets/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="/static/assets/plugins/pace/pace.js"></script>
+    <script src="/static/assets/scripts/siminta.js"></script>
+    <!-- Page-Level Plugin Scripts-->
+
+{% block script %}
+
+{% endblock %}
+
+</body>
+
+</html>
